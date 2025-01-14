@@ -21,5 +21,54 @@
     />
     <title>CatBot</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="title-container">
+        <img
+          class="title-img"
+          src="/static/imgs/cat.png"
+          alt="Cat"
+        />
+        <h1 class="title">CatBot</h1>
+      </div>
+      <div class="chat-container">
+        <div class="icon-container">
+          <img
+            class="icons"
+            src="/static/imgs/volume.png"
+            alt="Volume Icon"
+          /><img
+            class="icons"
+            src="/static/imgs/settings.png"
+            alt="Settings Icon"
+          /><img
+            class="icons"
+            src="/static/imgs/download.png"
+            alt="Download Icon"
+          />
+          <img
+            class="icons"
+            src="/static/imgs/history.png"
+            alt="History Icon"
+          />
+        </div>
+        <div class="chat-box">
+          <div id="chat"></div>
+          <div class="message-container">
+            <input
+              type="text"
+              id="message-input"
+            />
+            <button id="send-button">
+              <img
+                class="paw"
+                src="/static/imgs/paw.png"
+                alt="Cat Paw"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
