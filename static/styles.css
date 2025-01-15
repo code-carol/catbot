@@ -135,6 +135,12 @@ input[type="text"] {
   width: 20rem;
 }
 
+#first-message {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
 .user-message {
   display: flex;
   background-color: var(--purpleLighter);

@@ -59,6 +59,8 @@ function displayMessage(message, isUser) {
     messageDiv.appendChild(botText);
   }
 
+  const firstMessage = document.getElementById("first-message");
+  firstMessage.style.display = "none";
   chat.appendChild(messageDiv);
   chat.scrollTop = chat.scrollHeight;
 }
