@@ -129,3 +129,63 @@ input[type="text"] {
   max-width: 25rem;
   margin: 10px 0;
 }
+
+@media (max-width: 600px) {
+  .title-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .title-img {
+    width: 7rem;
+    margin-right: 0;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .chat-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chat-box {
+    width: 90%;
+    height: 28rem;
+    padding: 0 5px 50px 5px;
+  }
+
+  .icon-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .icons {
+    width: 2rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .message-container {
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  #message-input {
+    width: 75%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cat-image {
+    max-width: 15rem;
+    margin: 10px 0;
+  }
+}
