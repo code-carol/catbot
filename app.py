@@ -18,7 +18,7 @@ chat = ChatOpenAI(
 
 mood_prompt = ChatPromptTemplate.from_template(
     "Analyze if either of these conditions is true:"
-    "1. The message indicates sadness or negative emotions"
+    "1. The message indicates sadness, stress or negative emotions"
     "2. The message contains a request for cat pictures or images"
     "Respond with only 'true' if either condition is met, or 'false' if neither is met: {message}"
 )
