@@ -75,7 +75,33 @@ function displayCatImage(imageUrl) {
   chat.scrollTop = chat.scrollHeight;
 }
 
+let loadingSoundEnabled = true;
+
+function toggleVolume() {
+  const volumeIcon = document.getElementById("volume-icon");
+  loadingSoundEnabled = !loadingSoundEnabled;
+
+  const isMuted = volumeIcon.dataset.muted === "true";
+  volumeIcon.dataset.muted = (!isMuted).toString();
+
+  volumeIcon.src = loadingSoundEnabled
+    ? "/static/imgs/volume.png"
+    : "/static/imgs/volume-mute.png";
+}
+
 function displayLoading() {
+  if (loadingSoundEnabled) {
+    const loadingSound = new Audio("/static/sounds/loading-cat.m4a");
+    loadingSound.volume = 0.5;
+    try {
+      loadingSound.play().catch((error) => {
+        console.log("Audio playback failed:", error);
+      });
+    } catch (error) {
+      console.log("Audio playback failed:", error);
+    }
+  }
+
   const chat = document.getElementById("chat");
   const loadingDiv = document.createElement("div");
   const loadingId = "loading-" + Date.now();
@@ -113,3 +139,8 @@ document
       sendMessage();
     }
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const volumeIcon = document.getElementById("volume-icon");
+  volumeIcon.addEventListener("click", toggleVolume);
+});
