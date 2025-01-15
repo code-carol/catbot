@@ -4,6 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import requests
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -24,7 +25,6 @@ chat_prompt = ChatPromptTemplate.from_template("""
 You are a friendly and empathetic chatbot. Respond to the user's message in a natural, 
 conversational way. 
 
-Previous messages for context: {chat_history}
 User's message: {message}
 
 Provide a helpful and engaging response.""")
