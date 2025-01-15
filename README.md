@@ -1,6 +1,6 @@
 # 🐱 CatBot
 
-### A chatbot where every time you write you're feeling sad, it send back cat images so you can feel better
+### A chatbot that sends you adorable cat images every time you mention feeling sad to instantly lift your mood.
 
 ## 🎨 Design
 
