@@ -2,8 +2,6 @@
 
 ### A chatbot that sends you adorable cat images every time you mention feeling sad to instantly lift your mood.
 
-## 🎨 Design
-
 ## 🎯 Features
 
 ### Future Features
