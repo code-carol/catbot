@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "CatSong";
+  src: url("/static/fonts/cat-song-font/CatSong-3lly3.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --softWhite: #fbfbfb;
+  --purple: #a194f9d2;
+  --purpleLight: #c5baff;
+}
+
+body {
+  background-color: var(--purple);
+  font-family: "CatSong";
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
