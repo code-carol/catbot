@@ -4,7 +4,18 @@
 
 ## 🎯 Features
 
+- Integrated TheCatAPI to dynamically fetch and display real cat images based on user sentiment.
+- Implemented an asynchronous message handling system using JavaScript for smooth interactions.
+- Added the Nethenoob spinning cat animation as a loading indicator, complete with audio controls for user preference.
+
 ### Future Features
+
+- Filter by cat age (kittens, adult cats).
+- Save and organise previous conversations.
+- Implement new chat feature.
+- Secure image uploading and sharing capabilities.
+- Implement advanced image recognition to verify uploaded cat content.
+- Research, develop and train my own language model.
 
 ## 💻 Technologies
 
@@ -14,6 +25,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
-## 👀 Demo
-
 ## 📚 Lessons Learned
+
+- Learned to prioritise features under tight deadlines.
+- Gained practical experience in chatbot personality development.
+- Discovered the importance of MVP planning in hackathons.
