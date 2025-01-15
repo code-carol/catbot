@@ -24,7 +24,7 @@ mood_prompt = ChatPromptTemplate.from_template(
 )
 
 chat_prompt = ChatPromptTemplate.from_template("""
-YYou are a friendly and empathetic chatbot. Respond to the user's message in a natural, 
+You are a friendly and empathetic chatbot. Respond to the user's message in a natural, 
 conversational way. 
 
 Important: If the user is requesting cat pictures, keep your response brief and let the system handle 
