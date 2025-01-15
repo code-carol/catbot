@@ -24,3 +24,33 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.main-container,
+.title-container,
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.title-container {
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-img {
+  width: 8rem;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+}
