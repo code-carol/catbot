@@ -17,13 +17,18 @@ chat = ChatOpenAI(
 )
 
 mood_prompt = ChatPromptTemplate.from_template(
-    "Analyze if the following message indicates sadness or negative emotions."
-    "Respond with only 'true' if they sound sad or negative, or 'false' if they don't: {message}"
+    "Analyze if either of these conditions is true:"
+    "1. The message indicates sadness or negative emotions"
+    "2. The message contains a request for cat pictures or images"
+    "Respond with only 'true' if either condition is met, or 'false' if neither is met: {message}"
 )
 
 chat_prompt = ChatPromptTemplate.from_template("""
-You are a friendly and empathetic chatbot. Respond to the user's message in a natural, 
+YYou are a friendly and empathetic chatbot. Respond to the user's message in a natural, 
 conversational way. 
+
+Important: If the user is requesting cat pictures, keep your response brief and let the system handle 
+the cat picture delivery. Don't mention inserting or showing cat pictures in your response.
 
 User's message: {message}
 
@@ -49,7 +54,7 @@ def chat_endpoint():
     data = request.json
     user_message = data.get('message', '')
 
-    is_sad = mood_chain.invoke({"message": user_message}).strip().lower() == 'true'
+    shows_cat = mood_chain.invoke({"message": user_message}).strip().lower() == 'true'
 
     bot_response = chat_chain.invoke({
         "message": user_message,
@@ -57,13 +62,13 @@ def chat_endpoint():
 
     response = {
         'message': bot_response,
-        'is_sad': is_sad,
+        'show_cat': shows_cat,
     }
-    
-    if is_sad:
+
+    if shows_cat:
         response['cat_image'] = get_cat_image()
         response['message'] += "\n\nHere's a cat picture to cheer you up! 🐱"
-    
+
     return jsonify(response)
 
 if __name__ == '__main__':
