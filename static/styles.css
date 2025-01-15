@@ -11,8 +11,9 @@
 
 :root {
   --softWhite: #fbfbfb;
-  --purple: #a194f9d2;
+  --purple: #9d8ff8d2;
   --purpleLight: #c5baff;
+  --purpleLighter: #c5baffac;
 }
 
 body {
@@ -126,8 +127,35 @@ input[type="text"] {
 }
 
 .cat-image {
-  max-width: 25rem;
-  margin: 10px 0;
+  width: 20rem;
+  margin-left: 3rem;
+}
+
+.cat-spinning {
+  width: 20rem;
+}
+
+.user-message {
+  display: flex;
+  background-color: var(--purpleLighter);
+  margin-left: auto; /* Push the entire element to the end of the parent */
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.bot-message {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bot-img {
+  width: 3rem;
+  height: 2rem;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 600px) {
@@ -185,7 +213,10 @@ input[type="text"] {
   }
 
   .cat-image {
-    max-width: 15rem;
-    margin: 10px 0;
+    width: 15rem;
+  }
+
+  .cat-spinning {
+    width: 10rem;
   }
 }
